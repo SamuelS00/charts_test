@@ -6,7 +6,7 @@ import CallCountDonutChart from './chards/CallCountDonutChart/CallCountDonutChar
 function App() {
   return (
     <Container>
-      <Frame>
+      <Frame width={18} height={21} >
         <CallCountDonutChart />
       </Frame>
     </Container>

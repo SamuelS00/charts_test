@@ -8,7 +8,6 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 // recebe arrays de labels.
 // recebe arrays de valores desses labels.
-
 export default function CallCountDonutChart() {
   const chartData = [
     { x: 'Corretiva', y: 8.1 },

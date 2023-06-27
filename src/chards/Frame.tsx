@@ -1,24 +1,24 @@
 import React from 'react';
 import { Card } from 'react-bootstrap'
+import './style.css'
 
-// entender questão dos difetentes tamanhos dos gráficos e como posso deixar o width e height dinâmicos.
-
-const style = {
-  width: '19rem',
-  height: '21rem',
-  background: '#e8e8e8',
-  boxShadow: 'rgba(0, 0, 0, 0.50) 1.95px 1.95px 2.0px',
-  padding: '0.2rem'
+interface FrameParams {
+  children: JSX.Element,
+  width: number
+  height: number
 }
 
-export default function Frame({ children }: { children: JSX.Element }) {
+export default function Frame({ children, width, height }: FrameParams) {
+  const style = {
+    width: `${width}rem`,
+    height: `${height}rem`,
+  }
+
   return (
-    <Card style={style}>
+    <Card style={style} className='frame-card' >
       <Card.Body>
         { children }
       </Card.Body>
     </Card>
   );
 }
-
-
